@@ -221,6 +221,29 @@ footer .footer-links a {
     transition: color 0.3s ease;
 }
 
+
 footer .footer-links a:hover {
     color: #fff;
+}
+
+#animated-text-container {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+}
+
+#animated-text-container::after {
+    content: '|';
+    display: inline-block;
+    animation: blink-caret 0.75s infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }

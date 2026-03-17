@@ -73,3 +73,22 @@ document.querySelectorAll('.gallery-slideshow-container').forEach(container => {
 
     }, 3000); // Change image every 3 seconds
 });
+
+// Typing Animation for "Welcome Home"
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedTextContainer = document.getElementById('animated-text-container');
+    if (animatedTextContainer) {
+        const textToType = "Welcome Home";
+        let index = 0;
+        
+        function type() {
+            if (index < textToType.length) {
+                animatedTextContainer.textContent += textToType.charAt(index);
+                index++;
+                setTimeout(type, 150); // Adjust typing speed here
+            }
+        }
+        
+        type();
+    }
+});
